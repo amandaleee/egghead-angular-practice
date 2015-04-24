@@ -1,5 +1,24 @@
 <!DOCTYPE html>
-<html>
-	<head></head>
-	<body></body>
+<html ng-app>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.5/angular.min.js"></script>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+  <meta charset="utf-8">
+  <title>Egghead Tutorials</title>
+  
+</head>
+<body>
+	<p>{{"HELLO WORLD"}}</p>
+  <p>The paragraph above is wrapped in double curly braces. Double curly braces represent binding. To make this work, include angularjs in the header; and then add ng-app to the opening html tag. </p>
+  <input type="text" ng-model="first.greeting">
+  <p>The ng-model on the input above is first.greeting. first is an object; greeting is a property. The ng-class below is looking at ng-model to know what to show in the curly braces below. </p>
+  <div ng-class="first.greeting">
+    {{first.greeting}} {{"World"}}
+    <p>In addition, the ng-class attr above applies the value of first.greeting as a class to this div that's surrounding this element. This is a cool way to pull in bootstrap things [like if someone entered 'panel' or 'alert'].</p>
+  </div>
+  <div class="my-part">
+	  gonna try this myself here
+	</div><!--/my-part-->
+</body>
 </html>
