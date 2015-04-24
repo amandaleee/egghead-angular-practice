@@ -15,6 +15,7 @@
   				var first = this; 
   				first.greeting = "First";
   		})
+  		.controller("")
   		
   </script>
 </head>
@@ -30,8 +31,15 @@
 	<div ng-class="first.greeting" >
 		<!--again this is an object called first w property called greeting-->
 		<input type="text" ng-model="first.greeting" />
-		
+
 		{{ first.greeting }} {{ "World" }}
 	</div><!--/first.greeting-->
+
+	<div class="my-questions">
+	<ul>
+		<li>Can I have two controllers on a page, ie two elements with ng-controller attrs on them?</li>
+		<li>can ng-controller actually be on elements other than body?</li>
+	</ul>
+	</div>
 </body>
 </html>
