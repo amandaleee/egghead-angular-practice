@@ -18,7 +18,15 @@
     <p>In addition, the ng-class attr above applies the value of first.greeting as a class to this div that's surrounding this element. This is a cool way to pull in bootstrap things [like if someone entered 'panel' or 'alert'].</p>
   </div>
   <div class="my-part">
-	  gonna try this myself here
+	  <select ng-model="second.greeting">
+	  	<option>Goodbye</option>
+	  	<option>Au revoir</option>
+	  	<option>Adios</option>
+	  	<option>Arigato gozaimasu</option>
+	  </select>
+	  <br />
+	  <br />
+	  <p>The second greeting is {{ second.greeting }}
 	</div><!--/my-part-->
 </body>
 </html>
