@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.5/angular.min.js"></script>
+<link href="scss/foundation.scss" rel="stylesheet" type="text/css" />
+<link href="scss/normalize.scss" rel="stylesheet" type="text/css" />
+
+  <meta charset="utf-8">
+  <title>Egghead Tutorials - Lesson 2 - Controllers</title>
+  <script>
+  	angular.module("app", [])
+	  	//this is the module name, which matches the ng-app value in the html tag; then an empty array of dependencies.
+  		.controller("FirstCtrl", function FirstCtrl(){
+  			//the controller is named FirstCtrl, which is what we call it in the body attr, and then we made a fxn with the same name b/c it's helpful to debug later. 
+  				var first = this; 
+  				first.greeting = "First";
+  		})
+  		.controller("")
+  		
+  </script>
+</head>
+<body ng-controller="FirstCtrl as First">
+<!--ngcontroller="theNameWeCallItInJS as theNameWeCallItInHTML" -->
+	<div>
+		<p>To add a controller to the doc, add ng-controller to the body as an attr like this:</p>
+		<img src="assets/img/lesson2-controllerDiagram.png" alt="like this" />
+		<p>Put a script tag in the header called angular.module("name"). The "name" needs to match up with how we're calling it in the body tag attr.  </p>
+		<p>To understand more, look at the comments in the js above - this is easier for me. 
+	</div>
+
+	<div ng-class="first.greeting" >
+		<!--again this is an object called first w property called greeting-->
+		<input type="text" ng-model="first.greeting" />
+
+		{{ first.greeting }} {{ "World" }}
+	</div><!--/first.greeting-->
+
+	<div class="my-questions">
+	<ul>
+		<li>Can I have two controllers on a page, ie two elements with ng-controller attrs on them?</li>
+		<li>can ng-controller actually be on elements other than body?</li>
+	</ul>
+	</div>
+</body>
+</html>
